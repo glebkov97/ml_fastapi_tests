@@ -25,7 +25,9 @@ def test_predict_endpoint_with_invalid_text():
     assert response.status_code == 200
     # Проверяем, что ответ содержит ожидаемый результат анализа тональности
     # Здесь предполагается, что классификатор возвращает словарь с полями 'label' и 'score'
-    # Например: {'label': 'NEUTRAL', 'score': 0.5}
     assert isinstance(response.json(), dict)
     assert 'label' in response.json()
     assert 'score' in response.json()
+
+
+
